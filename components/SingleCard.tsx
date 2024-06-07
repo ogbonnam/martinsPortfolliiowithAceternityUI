@@ -36,7 +36,7 @@ export default function SingleCard() {
           </p>
 
           <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300 hover:bg-white hover:text-black">
-            Read More
+            Read More { }
           </button>
 
           {/* Meaty part - Meteor effect */}
