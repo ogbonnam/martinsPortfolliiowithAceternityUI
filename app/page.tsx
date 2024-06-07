@@ -27,7 +27,7 @@ export default function Home() {
           className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
         >
           Building Modern Web Applications should'nt be hard!. Turn your ideas
-          into 
+          into {" "}
           <Highlight className="text-black dark:text-white">
             stunning websites using latest technologies.
           </Highlight>
