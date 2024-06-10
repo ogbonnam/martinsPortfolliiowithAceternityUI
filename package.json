@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "overrides": {
-    "next-contentlayer": { "next": "$next"}
+    "next-contentlayer": {
+      "next": "$next"
+    }
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
     "clsx": "^2.1.1",
     "contentlayer": "^0.3.4",
     "date-fns": "^3.6.0",
