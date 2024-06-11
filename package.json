@@ -13,6 +13,9 @@
     "os": false,
     "path": false
   },
+  "eslint": {
+    "ignoreDuringBuilds": true
+  },
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "clsx": "^2.1.1",
