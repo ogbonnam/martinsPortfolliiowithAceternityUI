@@ -8,23 +8,26 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "overrides": {
-    "next-contentlayer": {
-      "next": "$next"
-    }
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "clsx": "^2.1.1",
-    "contentlayer": "^0.3.4",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.2.10",
+    "gray-matter": "^4.0.3",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^14.2.3",
-    "next-contentlayer": "^0.3.4",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.3.0"
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.13.2",
+    "rehype-slug": "^6.0.0",
+    "tailwind-merge": "^2.3.0",
+    "velite": "^0.1.0-rc.3"
   },
   "devDependencies": {
     "@types/node": "^20",

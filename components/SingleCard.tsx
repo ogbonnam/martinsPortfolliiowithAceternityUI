@@ -1,16 +1,22 @@
 import React from "react";
 import { Meteors } from "@/components/ui/meteors";
 import { compareDesc, format, parseISO } from 'date-fns'
-import { allPosts, Post } from 'contentlayer/generated'
+import { cn, formatDate } from "@/utils/extras";
 import Link from 'next/link'
 
+interface PostItemProps {
+  slug: string;
+  title: string;
+  summary?: string;
+  date: string;
+  tags?: Array<string>;
+}
 
-
-export default function SingleCard(post: Post) {
+export default function SingleCard({slug,title,summary,date,tags,}: PostItemProps) {
 
   return (
     <>
-      {post.featured === true ? (
+    
         <div className="">
       <div className=" w-full relative max-w-xs">
         <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
@@ -33,11 +39,11 @@ export default function SingleCard(post: Post) {
           </div>
 
           <h1 className="font-bold text-xl text-white mb-4 relative z-50">
-            {post.title}
+            {title}
           </h1>
 
           <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
-            {post.summary}
+            {summary}
           </p>
 
           <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300 hover:bg-white hover:text-black">
@@ -49,7 +55,7 @@ export default function SingleCard(post: Post) {
         </div>
       </div>
     </div>
-      ): ""}
+    
     
     </>
   );

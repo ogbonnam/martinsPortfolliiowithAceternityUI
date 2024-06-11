@@ -5,29 +5,23 @@ import Image from "next/image";
 import SingleCard from "@/components/SingleCard";
 import Link from 'next/link'
 import { compareDesc, format, parseISO } from 'date-fns'
-import { allPosts, Post } from 'contentlayer/generated'
+
+import { cn, sortPosts } from "@/utils/extras";
+import { posts } from "#site/data";
+
+// import getPostData from "@/utils/getPostMetaData"
 
 
-function PostCard(post: Post) {
-  return (
-    <div className="mb-8">
-      <h2 className="mb-1 text-xl">
-        <Link href={post.url} className="text-blue-700 hover:text-blue-900 dark:text-blue-400">
-          {post.title}
-        </Link>
-      </h2>
-      <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
-        {format(parseISO(post.date), 'LLLL d, yyyy')}
-      </time>
-      <div className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0">{ post.summary }</div>
-    </div>
-  )
-}
+
 
 export default function Home() {
-    const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
-
+    // const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+  // const postData = getPostData('data/blog')
+  // console.log(postData)
+  const latestPosts = sortPosts(posts).slice(0, 5);
+  console.log(latestPosts)
   return (
+    
     <main className="flex min-h-screen flex-col">
       <div>
         <p>Logo</p>
@@ -57,9 +51,15 @@ export default function Home() {
       </HeroHighlight>
       <div className="bg-white text-black text-center justify-between pt-28 pb-28">
         <div className="flex flex-wrap w-4/5 mx-auto gap-8">
-          {posts.map((post, idx) => (
-             <SingleCard key={idx} {...post} />
-      ))}
+          {latestPosts.map((post, idx) => (
+            post.featured && (
+              <SingleCard key={idx} slug={post.slug}
+                  title={post.title}
+                  summary={post.summary}
+                  date={post.date}
+                  tags={post.tags} />
+            )
+          ))}
         </div>
       </div>
       <div className="flex bg-gray-dark h-64 justify-center items-center">

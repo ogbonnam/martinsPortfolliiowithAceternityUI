@@ -21,11 +21,11 @@
     //  ^^^^^^^^^^^
     "paths": {
       "@/*": ["./*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "#site/data": ["./.velite"]
     }
   
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/page.jsx"],
   "exclude": ["node_modules"]
 }
 
