@@ -3,6 +3,8 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,11 +14,18 @@ module.exports = {
   ],
   // darkMode: "class",
   theme: {
-        extend: {
+    extend: {
       animation: {
+        move: "move 5s linear infinite",
         "meteor-effect": "meteor 5s linear infinite",
       },
+    
+ 
       keyframes: {
+         move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
           "70%": { opacity: "1" },

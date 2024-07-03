@@ -9,6 +9,8 @@ export default {
   },
 };
 
+
+
 class VeliteWebpackPlugin {
   static started = false;
   constructor(/** @type {import('velite').Options} */ options = {}) {
