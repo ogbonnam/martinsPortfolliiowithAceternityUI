@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function contact() {
   return (
-      <div className='flex bg-white text-black text-center justify-center pt-28 pb-28 items-center'>
+      <div className='flex bg-white text-black dark:bg-black dark:text-white text-center justify-center pt-28 pb-28 items-center'>
           <form className='w-1/2'>
               <div className='flex flex-col pt-10'>
                   <label className='text-start mb-5'>Full Name</label>

@@ -30,7 +30,7 @@ export function PostCard({slug,title,summary,date,tags,author}: PostItemProps) {
             height="100"
             width="100"
             alt="Avatar"
-            src="/manu.png"
+            src="/test.jpg"
             className="h-10 w-10 rounded-full border-2 object-cover"
           />
           <div className="flex flex-col">

@@ -16,6 +16,7 @@ import { posts } from "#site/data";
 
 
 export default function Home() {
+  
     // const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
   // const postData = getPostData('data/blog')
   // console.log(postData)
@@ -44,11 +45,12 @@ export default function Home() {
           into {" "}
           <Highlight className="text-black dark:text-white">
             stunning websites using latest technologies.
+           
           </Highlight>
         </motion.h1>
       </HeroHighlight>
-      <div className="bg-white text-black text-center justify-between pt-28 pb-28">
-        <div className="flex flex-wrap w-4/5 mx-auto gap-8">
+      <div className="flex dark:bg-black dark:text-white bg-white text-black w-full text-center justify-between pt-28 pb-28">
+        <div className="flex flex-row max-w-5xl flex-wrap mx-auto gap-8">
           {latestPosts.map((post, idx) => (
             post.featured && (
               <SingleCard
@@ -63,15 +65,16 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="flex dark:bg-black bg-white min-h-96 justify-center items-center w-full">
+      <div className="flex  dark:bg-black bg-white min-h-96 justify-center items-center w-full">
         <form className="flex flex-col justify-center items-center w-1/2">
-          <input placeholder="SignIn to our newsletter" type="text" name="name" className="h-10 w-full rounded outline p-5" />
-          <Button
+          <input placeholder="SignIn to our newsletter" type="text" name="name" className="h-10 w-full rounded outline p-5 mb-5" />
+          {/* <Button
               text="Subscribe"
               color='bg-red-600 text-white'
-              size="h-14 w-full"
+              size="h-14"
               radius="rounded"
-          />
+          /> */}
+          <button className="h-14 w-full rounded bg-red-500 hover:bg-red-300 text-white">SUBSCRIBE</button>
           <span className="italic">You can trust that we do not send spam!</span>
         </form>
       </div>
