@@ -77,7 +77,7 @@ export default async function PostPage({ params }: PostPageProps) {
   <div className='w-4/5'>
 
       <article className="flex flex-col prose !max-w-none dark:prose-invert w-full  prose-h1:text-red-800 prose-h1:text-5xl prose-p:text-bold prose-p:text-3xl prose-ul:text-3xl prose-ol:text-3xl ">
-        <Image src={post?.coverImage} height={0} width={0} sizes="100vw" style={{width:"100%", height:"450px"}} />
+        {/* <Image src={post?.coverImage} height={0} width={0} sizes="100vw" style={{width:"100%", height:"450px"}} /> */}
             <h1 className="mb-2 w-full">{post?.title}</h1>
             {/* <div className="flex gap-2 mb-2">
               {post.tags?.map((tag) => (
