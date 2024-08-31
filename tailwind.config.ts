@@ -18,7 +18,10 @@ module.exports = {
       animation: {
         move: "move 5s linear infinite",
         "meteor-effect": "meteor 5s linear infinite",
+        "infinite-scroll": "infinite-scroll 50s linear infinite",
+        "infinite-scroll1": "infinite-scroll1 50s linear infinite",
       },
+
     
  
       keyframes: {
@@ -34,6 +37,14 @@ module.exports = {
             opacity: "0",
           },
         },
+        "infinite-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-50% - 20px))" },
+        },
+        "infinite-scroll1": {
+          "100%": { transform: "translateX(calc(50% - 20px))" },
+          "0%": { transform: "translateX(0)" },
+        }
       },
     },
   },
@@ -51,6 +62,7 @@ module.exports = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    require("@tailwindcss/typography"),
   ],
 };
 

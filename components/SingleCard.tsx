@@ -3,6 +3,7 @@ import { Meteors } from "@/components/ui/meteors";
 import { compareDesc, format, parseISO } from 'date-fns'
 import { cn, formatDate } from "@/utils/extras";
 import Link from 'next/link'
+import { Image } from "velite";
 
 interface PostItemProps {
   slug: string;
@@ -10,16 +11,17 @@ interface PostItemProps {
   summary?: string;
   date: string;
   tags?: Array<string>;
+  coverImage?: Image,
 }
 
-export default function SingleCard({slug,title,summary,date,tags,}: PostItemProps) {
+export default function SingleCard({slug,title,summary,date,tags,coverImage}: PostItemProps) {
 
   return (
     <>
     
         <div className="">
       <div className=" w-full relative max-w-xs">
-        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-gray-500 rounded-full blur-3xl" />
         <div className="relative shadow-xl bg-red-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
           <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
             <svg
@@ -46,9 +48,11 @@ export default function SingleCard({slug,title,summary,date,tags,}: PostItemProp
             {summary}
           </p>
 
-          <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300 hover:bg-white hover:text-black">
-            Read More
-          </button>
+          <Link href={"/" + slug}>
+            <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300 hover:bg-white hover:text-black">
+              Read More
+            </button>
+          </Link>
 
           {/* Meaty part - Meteor effect */}
             <Meteors number={5} />

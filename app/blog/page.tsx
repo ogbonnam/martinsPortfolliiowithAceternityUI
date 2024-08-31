@@ -9,7 +9,7 @@ export default function postPage() {
   const latestPosts = sortPosts(posts).slice(0, 6);
   return (
       <div className="flex dark:bg-black dark:text-white bg-white w-full text-black text-center justify-between pt-28 pb-28">
-      <div className='flex flex-row mx-auto max-w-5xl flex-wrap  py-4 gap-6'>
+      <div className='flex flex-row mx-auto max-w-7xl flex-wrap  py-4 gap-20'>
        {latestPosts.map((post, idx) => (
          post.featured && (
            <PostCard

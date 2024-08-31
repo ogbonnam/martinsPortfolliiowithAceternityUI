@@ -1,0 +1,16 @@
+export const companyLogos = [
+    '/images/codeigniter.jfif',
+    '/images/laravel.jfif',
+    '/images/nodejs.jfif',
+    '/images/react.jfif',
+    '/images/django.jfif',
+    '/images/flask.jfif',
+    '/images/mongodb.jfif',
+    '/images/mysql.jfif',
+    '/images/appwrite.jfif',
+    '/images/svelte.jfif',
+    '/images/postgresql.jfif',
+    '/images/supabase.jfif',
+    '/images/pocketbase.jfif',
+    '/images/nextjs.jpg',
+];
