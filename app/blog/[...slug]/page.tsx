@@ -90,7 +90,7 @@ export default async function PostPage({ params }: PostPageProps) {
             <hr className="my-4" />
             
 
-            <MDXContent code={post?.body} />
+            {/* <MDXContent code={post?.body} /> */}
             
       </article>
   </div>
